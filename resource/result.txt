@@ -1,0 +1,9 @@
+{
+	"Sentence A" : 
+	{
+		"Postive":"40%",
+		"Negative":"60%",
+		"Non-Hate Speech":"30%",
+		"Hate Speech":"100%"
+	}
+}
