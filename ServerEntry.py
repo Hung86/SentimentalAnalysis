@@ -2,6 +2,7 @@ import flask
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import time
+import os
 
 import json
 
@@ -42,6 +43,7 @@ def handleClassification():
             time.sleep(2)
         print('=== : GET : sending response')
         if isOK:
+            os.remove("resource/result.txt")
             return json.dumps(data), 200, {'ContentType': 'application/json'}
         else:
             return json.dumps(""), 500, {'ContentType': 'application/json'}
